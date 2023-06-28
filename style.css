@@ -28,7 +28,17 @@
     gap: 10px;
 }
 
+.mistake{
+    display: flex;
+    gap: 10px;
 
+}
+
+.mistake button{
+    flex:1 1 0;
+    padding: 20px;
+    border: black 2px solid;
+}
 
 
 
@@ -50,7 +60,7 @@
     font-size: 35px;
 }
 
-button{
+.col button{
     width: 60px;
     height: 60px;
     border: black 1px solid;
