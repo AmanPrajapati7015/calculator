@@ -14,7 +14,7 @@
     margin: 50px auto;
     gap: 20px;
     padding: 20px;
-    background-color: aquamarine;
+    background-color: rgb(132, 174, 251);
 }
 
 .buttons{
@@ -36,12 +36,18 @@
 
 
 .display{
+    display: flex;
     background-color: bisque;
     height: 50px ;
     border-radius: 5px;
     padding: 10px;
-    font-size: 20px;
     border: black 2px solid;
+    align-items: center;
+    justify-content: end;
+}
+
+.display p {
+    font-size: 35px;
 }
 
 button{
@@ -54,4 +60,7 @@ button{
 
 button:hover{
     background-color: bisque;
+}
+button:active{
+    background-color: red;
 }
