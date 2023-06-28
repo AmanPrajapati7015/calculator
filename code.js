@@ -6,9 +6,9 @@ const divide = (a, b)=>{
     return a/b;
 };
 
-let no1 = 8;
-let operator = "+";
-let no2=6;
+let no1;
+let operator;
+// let no2=6;
 
 let operate = function(operator, no1, no2){
     if (operator == "+") return addition(no1, no2);
@@ -18,4 +18,23 @@ let operate = function(operator, no1, no2){
     return "Not a valid operator"
 }
 
-console.log(operator("0/9"));
+const display = document.querySelector('.display-text');
+
+let digits = Array.from(document.querySelectorAll('.digit'));
+digits.forEach((digitBtn)=>{
+    digitBtn.addEventListener("click", (e)=>{
+        display.textContent += e.target.getAttribute("id");
+        no1 = +(display.textContent);
+    })
+})
+
+let operators = Array.from(document.querySelectorAll('.operators'));
+operators.forEach((operatorBtn)=>{
+    operatorBtn.addEventListener("click", (e)=>{
+        operator = e.target.getAttribute("id");
+        console.log(operator);
+        display.textContent = "" 
+    })
+})
+
+
