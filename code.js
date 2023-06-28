@@ -2,7 +2,7 @@ const addition = (a, b) => (+a)+(+b);
 const subtraction = (a, b) => a-b;
 const multiply = (a, b) => a*b;
 const divide = (a, b)=>{
-    if (b == 0) return "I am not dumb!";
+    if (b == 0) return "Can't divide by 0!";
     return a/b;
 };
 
@@ -19,9 +19,11 @@ let operate = function(operator, no1, no2){
 }
 
 const getResult = ()=>{
-    if (operator== undefined){
-        console.log("operator is not selected");
-         display.textContent ="OOPS";
+    if (operator == undefined){
+        display.textContent ="give an operator!";
+    }
+    else if (display.textContent == ''){
+        alert('give another operand!');
     }
     else{
         no2 = +(display.textContent);
