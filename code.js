@@ -32,14 +32,14 @@ const getResult = ()=>{
 
 const display = document.querySelector('.display-text');
 
-let digits = Array.from(document.querySelectorAll('.digit'));
+const digits = Array.from(document.querySelectorAll('.digit'));
 digits.forEach((digitBtn)=>{
     digitBtn.addEventListener("click", (e)=>{
         display.textContent += e.target.getAttribute("id");
     })
 })
 
-let operators = Array.from(document.querySelectorAll('.operators'));
+const operators = Array.from(document.querySelectorAll('.operators'));
 operators.forEach((operatorBtn)=>{
     operatorBtn.addEventListener("click", (e)=>{
         no1 = +(display.textContent);
@@ -48,10 +48,10 @@ operators.forEach((operatorBtn)=>{
     })
 })
 
-let equalBtn = document.querySelector(".equal");
+const equalBtn = document.querySelector(".equal");
 equalBtn.addEventListener("click", getResult);
 
-let clear = document.querySelector("#ac");
+const clear = document.querySelector("#ac");
 clear.addEventListener("click", ()=>{
     no1 = undefined;
     no2 = undefined;
@@ -59,3 +59,10 @@ clear.addEventListener("click", ()=>{
     display.textContent = "";
 });
 
+
+
+const deleteBtn = document.querySelector("#delete");
+deleteBtn.addEventListener("click", ()=>{
+    let l = display.textContent.length -1;
+    display.textContent = display.textContent.slice(0, l);
+})
