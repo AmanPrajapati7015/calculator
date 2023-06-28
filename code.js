@@ -8,7 +8,7 @@ const divide = (a, b)=>{
 
 let no1;
 let operator;
-// let no2=6;
+let no2;
 
 let operate = function(operator, no1, no2){
     if (operator == "+") return addition(no1, no2);
@@ -24,17 +24,29 @@ let digits = Array.from(document.querySelectorAll('.digit'));
 digits.forEach((digitBtn)=>{
     digitBtn.addEventListener("click", (e)=>{
         display.textContent += e.target.getAttribute("id");
-        no1 = +(display.textContent);
     })
 })
 
 let operators = Array.from(document.querySelectorAll('.operators'));
 operators.forEach((operatorBtn)=>{
     operatorBtn.addEventListener("click", (e)=>{
+        no1 = +(display.textContent);
         operator = e.target.getAttribute("id");
-        console.log(operator);
-        display.textContent = "" 
+        display.textContent = "" ;
     })
 })
 
+
+let equalBtn = document.querySelector(".equal");
+equalBtn.addEventListener("click", ()=>{
+    if (operator== undefined){
+        display.textContent = "operator is not selected";
+    }
+    else{
+        no2 = +(display.textContent);
+        display.textContent=  operate(operator, no1, no2);
+        
+    }
+
+})
 
