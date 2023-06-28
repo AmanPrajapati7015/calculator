@@ -2,7 +2,7 @@ const addition = (a, b) => (+a)+(+b);
 const subtraction = (a, b) => a-b;
 const multiply = (a, b) => a*b;
 const divide = (a, b)=>{
-    if (b == 0) return "OOPS";
+    if (b == 0) return "I am not dumb!";
     return a/b;
 };
 
