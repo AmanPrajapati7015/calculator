@@ -26,16 +26,14 @@ const getResult = ()=>{
     else{
         no2 = +(display.textContent);
         let result =  operate(operator, no1, no2);
-        no1 = result;
         display.textContent= result;
         no1Display.textContent="";
+        no1 = undefined;
     }
 }
 
-
 const display = document.querySelector('.display-text');
 const no1Display = document.querySelector(".no1");
-
 
 const digits = Array.from(document.querySelectorAll('.digit'));
 digits.forEach((digitBtn)=>{
@@ -71,8 +69,6 @@ clear.addEventListener("click", ()=>{
     display.textContent = "";
     no1Display.textContent = '';
 });
-
-
 
 const deleteBtn = document.querySelector("#delete");
 deleteBtn.addEventListener("click", ()=>{
