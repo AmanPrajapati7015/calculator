@@ -11,10 +11,12 @@
     display: flex;
     flex-direction: column;
     width: 350px;
-    margin: 50px auto;
+    margin: 100px auto;
     gap: 20px;
     padding: 20px;
-    background-color: rgb(132, 174, 251);
+    background-color: rgb(170, 170, 170);
+    border: black 2px solid;
+    border-radius: 15px;
 }
 
 .buttons{
@@ -38,18 +40,24 @@
     flex:1 1 0;
     padding: 20px;
     border: black 2px solid;
+    border-radius: 12px;
+    font-size: 21px;
 }
 
-
-
+.mistake #ac{
+    background-color: rgb(238, 153, 153);
+}
+.mistake #delete{
+    background-color: rgb(153, 153, 238);
+}
 
 
 
 .display{
     display: flex;
-    background-color: bisque;
+    background-color: rgb(238, 238, 238);
     height: 50px ;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     border: black 2px solid;
     align-items: center;
@@ -63,16 +71,19 @@
 }
 
 .col button{
-    width: 60px;
-    height: 60px;
-    border: black 1px solid;
-    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    border: black 2px solid;
+    border-radius: 8px;
+    background-color: rgb(238, 238, 238);
+    font-size: 21px;
 }
 
 
-button:hover{
-    background-color: bisque;
+.col button:hover{
+    background-color: rgb(132, 237, 251);
 }
-button:active{
-    background-color: red;
+
+.col button.operators:hover{
+    background-color: rgb(255, 166, 154)
 }
