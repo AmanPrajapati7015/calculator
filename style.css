@@ -46,19 +46,16 @@
 
 
 .display{
-    display: flex;
-    flex-direction: column;
     background-color: bisque;
     height: 100px ;
     border-radius: 5px;
     padding: 10px;
     border: black 2px solid;
-    align-items: end;
-    justify-content: center;
 }
 
 .display p {
     font-size: 35px;
+    display:  inline;
 }
 
 .col button{

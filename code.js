@@ -28,11 +28,14 @@ const getResult = ()=>{
         let result =  operate(operator, no1, no2);
         no1 = result;
         display.textContent= result;
+        no1Display.textContent="";
     }
 }
 
 
 const display = document.querySelector('.display-text');
+const no1Display = document.querySelector(".no1");
+
 
 const digits = Array.from(document.querySelectorAll('.digit'));
 digits.forEach((digitBtn)=>{
@@ -53,6 +56,7 @@ operators.forEach((operatorBtn)=>{
         }
         operator = e.target.getAttribute("id");
         display.textContent = "" ;
+        no1Display.textContent = `${no1} ${operator}`;
     })
 })
 
@@ -65,6 +69,7 @@ clear.addEventListener("click", ()=>{
     no2 = undefined;
     operator = undefined;
     display.textContent = "";
+    no1Display.textContent = '';
 });
 
 
