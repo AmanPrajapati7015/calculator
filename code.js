@@ -44,6 +44,12 @@ digits.forEach((digitBtn)=>{
     })
 })
 
+const pointBtn = document.querySelector(".point");
+pointBtn.addEventListener("click", ()=>{
+    if (display.textContent.includes(".")) return ;
+    display.textContent += "."
+})
+
 const operators = Array.from(document.querySelectorAll('.operators'));
 operators.forEach((operatorBtn)=>{
     operatorBtn.addEventListener("click", (e)=>{
