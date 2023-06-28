@@ -25,7 +25,9 @@ const getResult = ()=>{
     }
     else{
         no2 = +(display.textContent);
-        display.textContent=  operate(operator, no1, no2);
+        let result =  operate(operator, no1, no2);
+        no1 = result;
+        display.textContent= result;
     }
 }
 
@@ -42,7 +44,13 @@ digits.forEach((digitBtn)=>{
 const operators = Array.from(document.querySelectorAll('.operators'));
 operators.forEach((operatorBtn)=>{
     operatorBtn.addEventListener("click", (e)=>{
-        no1 = +(display.textContent);
+        if (no1 && operator){
+            let result = operate(operator, no1, +(display.textContent));
+            no1 = result;
+        }
+        else{
+            no1 = +(display.textContent)
+        }
         operator = e.target.getAttribute("id");
         display.textContent = "" ;
     })
