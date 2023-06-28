@@ -18,6 +18,18 @@ let operate = function(operator, no1, no2){
     return "Not a valid operator"
 }
 
+const getResult = ()=>{
+    if (operator== undefined){
+        console.log("operator is not selected");
+         display.textContent ="OOPS";
+    }
+    else{
+        no2 = +(display.textContent);
+        display.textContent=  operate(operator, no1, no2);
+    }
+}
+
+
 const display = document.querySelector('.display-text');
 
 let digits = Array.from(document.querySelectorAll('.digit'));
@@ -36,17 +48,14 @@ operators.forEach((operatorBtn)=>{
     })
 })
 
-
 let equalBtn = document.querySelector(".equal");
-equalBtn.addEventListener("click", ()=>{
-    if (operator== undefined){
-        display.textContent = "operator is not selected";
-    }
-    else{
-        no2 = +(display.textContent);
-        display.textContent=  operate(operator, no1, no2);
-        
-    }
+equalBtn.addEventListener("click", getResult);
 
-})
+let clear = document.querySelector("#ac");
+clear.addEventListener("click", ()=>{
+    no1 = undefined;
+    no2 = undefined;
+    operator = undefined;
+    display.textContent = "";
+});
 
