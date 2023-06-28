@@ -5,8 +5,6 @@
     background: none;
 }
 
-
-
 .calculator{
     display: flex;
     flex-direction: column;
@@ -27,12 +25,12 @@
 .col{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .mistake{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 
 }
 
@@ -85,5 +83,5 @@
 }
 
 .col button.operators:hover{
-    background-color: rgb(255, 166, 154)
+    background-color: rgb(255, 166, 154);
 }
